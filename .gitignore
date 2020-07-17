@@ -1,0 +1,6 @@
+.DS_Store
+._.DS_STORE
+._deploy
+.gitmodules
+.vscode
+deploy
