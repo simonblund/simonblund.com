@@ -1,4 +1,4 @@
-baseURL = "http://simonblund.com/"
+baseURL = "http://simonblundgithub.io/simonblund.com/"
 publishDir = "docs"
 languageCode = "sv-SE"
 title = "Simon Blomsterlund"
