@@ -1,0 +1,8 @@
+#!/bin/sh
+USER=simon244
+HOST=simonblund.com
+DIR=public_html/simonblund   # might sometimes be empty!
+
+hugo && rsync -avz --delete public/ ${USER}@${HOST}:~/${DIR}
+
+exit 0

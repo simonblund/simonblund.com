@@ -1,0 +1,44 @@
+baseURL = "http://simonblund.com/"
+languageCode = "sv-SE"
+title = "Simon Blomsterlund"
+tags = ["portfolio", "web design", "webbutveckling", "foto"]
+config = "config.toml"
+theme = "osprey"
+canonifyURLS = true
+googleAnalytics = ""
+disqusShortname = ""
+disableKinds = ["taxonomy", "taxonomyTerm"] # This theme does not currently use "tag" and "category" taxonomies
+
+[Params]
+    tagline = "Smartare, lättare, snabbare"
+    author = "Simon Blomsterlund"
+    description = "Full-stack web developer och fotoentusiast med fallenhet för Linux."
+    logoBig = "/images/logo2.svg"
+    logoSmall = "/images/logo2.svg"
+    favicon = "favicon.ico"
+    opengraphImage = "logo2.svg"
+    twitter = "Simonblunds"
+    linkedin = "simonblund"
+    github = "simonblund"
+    email = "simon@simonblund.com"
+    googleTagManager = ""
+    highlightJS = true
+    copyright = true
+    credit = false
+    customCSS = false
+    cacheBustCSS = false
+    cacheBustJS = false
+    ajaxFormspree = true
+
+[[menu.main]]
+    name = "Om"
+    url  = "/#about"
+    weight = 1
+[[menu.main]]
+    name = "Projekt"
+    url  = "/#work"
+    weight = 2
+[[menu.main]]
+    name = "Kontakt"
+    url  = "/#contact"
+    weight = 3

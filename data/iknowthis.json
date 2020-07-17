@@ -1,0 +1,78 @@
+{
+  "things": [
+    {
+        "name" : "UNIFI",
+        "url" : "",
+        "description" : "Nätverkslösningar för företag och offentlig sektor",
+        "grade" : "3"
+    },
+    {
+        "name" : "Python",
+        "url" : "",
+        "description" : "Programmeringsspråk",
+        "grade" : "2"
+    },
+    {
+        "name" : "GoLang",
+        "url" : "",
+        "description" : "Programmeringsspråk",
+        "grade" : "1"
+    },
+    {
+        "name" : "Java",
+        "url" : "",
+        "description" : "Programmeringsspråk",
+        "grade" : "1"
+    },
+    {
+        "name" : "Javascript",
+        "url" : "",
+        "description" : "Scriptspråk för webbsidor",
+        "grade" : "3"
+    },
+    {
+        "name" : "VueJs",
+        "url" : "",
+        "description" : "Frontend-framework",
+        "grade" : "2"
+    },
+    {
+        "name" : "Django",
+        "url" : "",
+        "description" : "Framework för webbapplikationer",
+        "grade" : "2"
+    },
+    {
+        "name" : "HTML",
+        "url" : "",
+        "description" : "Markup för webbsidor",
+        "grade" : "3"
+    },
+    {
+        "name" : "Design",
+        "url" : "",
+        "description" : "Är något jag jobbar kontinuerligt med att bli bättre på",
+        "grade" : "1"
+    },
+    {
+        "name" : "Linux klientadministration",
+        "url" : "",
+        "description" : "Administration av linux-användardatorer",
+        "grade" : "3"
+    },
+    {
+        "name" : "Linux Server-administration",
+        "url" : "",
+        "description" : "Administration av linuxbaserade servrar för mindre företag",
+        "grade" : "2"
+    },
+    {
+        "name" : "HUGO",
+        "url" : "",
+        "description" : "En smidig statisk sidgenerator som den här sidan använder",
+        "grade" : "2"
+    }
+    
+    
+  ]
+}
