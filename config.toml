@@ -1,4 +1,5 @@
 baseURL = "http://simonblund.com/"
+publishDir = "docs"
 languageCode = "sv-SE"
 title = "Simon Blomsterlund"
 tags = ["portfolio", "web design", "webbutveckling", "foto"]
