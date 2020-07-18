@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Simon Blomsterlund</title>
-    <link>http://simonblund.com/</link>
+    <link>http://simonblund.github.io/simonblund.com/</link>
     <description>Recent content on Simon Blomsterlund</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>sv-SE</language>
     <lastBuildDate>Fri, 06 Oct 2017 22:14:53 +0200</lastBuildDate>
     
-	<atom:link href="http://simonblund.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://simonblund.github.io/simonblund.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Om och vad</title>
-      <link>http://simonblund.com/about/</link>
+      <link>http://simonblund.github.io/simonblund.com/about/</link>
       <pubDate>Fri, 06 Oct 2017 22:14:53 +0200</pubDate>
       
-      <guid>http://simonblund.com/about/</guid>
+      <guid>http://simonblund.github.io/simonblund.com/about/</guid>
       <description>Hej!
 Mitt namn är Simon.
 Jag pysslar med:
@@ -25,55 +25,55 @@ Jag pysslar med:
     
     <item>
       <title>Peders Aplagård</title>
-      <link>http://simonblund.com/project/aplagarden/</link>
+      <link>http://simonblund.github.io/simonblund.com/project/aplagarden/</link>
       <pubDate>Sat, 06 May 2017 22:43:27 +0200</pubDate>
       
-      <guid>http://simonblund.com/project/aplagarden/</guid>
+      <guid>http://simonblund.github.io/simonblund.com/project/aplagarden/</guid>
       <description>Peders aplagård behövde akut en ny hemsida då den gamla slutade fungera i en domänflytt. Jag fixade i ordning en tillfällig statisk brochyrsida i väntan på tid att kunna göra en ny sida med lite bättre design.</description>
     </item>
     
     <item>
       <title>Brudhäll Ab</title>
-      <link>http://simonblund.com/project/brudhall-hemsida/</link>
+      <link>http://simonblund.github.io/simonblund.com/project/brudhall-hemsida/</link>
       <pubDate>Mon, 13 Jun 2016 17:00:53 +0100</pubDate>
       
-      <guid>http://simonblund.com/project/brudhall-hemsida/</guid>
+      <guid>http://simonblund.github.io/simonblund.com/project/brudhall-hemsida/</guid>
       <description>Brudhäll är ett kombinerat hotell, restaurang och gästhamn i Karlby på Kökar. Under våren 2016 tog de kontakt med mig och undrade om jag kunde fixa en hemsida åt dem. Hemsidan skulle integreras med deras e-bokningssystem och det skulle vara lätt för potentiella kunder att komma i kontakt med företaget. Hemsidan blev ett rätt stort projekt då det krävdes nya bilder, och kunden ville ha en sida som gick att använda på tre språk.</description>
     </item>
     
     <item>
       <title>Brudhäll Wifi</title>
-      <link>http://simonblund.com/project/brudhall-wifi/</link>
+      <link>http://simonblund.github.io/simonblund.com/project/brudhall-wifi/</link>
       <pubDate>Fri, 13 May 2016 23:05:29 +0100</pubDate>
       
-      <guid>http://simonblund.com/project/brudhall-wifi/</guid>
+      <guid>http://simonblund.github.io/simonblund.com/project/brudhall-wifi/</guid>
       <description>Då företaget bytte ledning till säsongen 2016 konstaterades att gästernas önskemål hade förändrats under tidens gång, ett hotell som inte erbjuder snabbt trådlöst nät ger inget gott intryck. Lösningen med UNIFI trådlösa accespunkter har fungerat väl och erbjuder möjlighet att använda sig av engångskoder för att logga in på gästnätverket, en smidig lösning om man vill se till att gästerna får bästa möjliga hastighet. Det trådlösa nätverket täcker in hotellet, restaurangen och största delen av gästhamnen.</description>
     </item>
     
     <item>
       <title>Kökar Service</title>
-      <link>http://simonblund.com/project/service/</link>
+      <link>http://simonblund.github.io/simonblund.com/project/service/</link>
       <pubDate>Fri, 13 Nov 2015 15:57:12 +0100</pubDate>
       
-      <guid>http://simonblund.com/project/service/</guid>
+      <guid>http://simonblund.github.io/simonblund.com/project/service/</guid>
       <description>Johannes på det då nystartade företaget Kökar service hörde av sig till mig hösten 2015 och undrade om jag kunde hjälpa honom sätta upp en ny hemsida och igång Google Apps for Work för honom. Jag byggde en lätt och liten brochyrhemsida åt honom och satte igång Google Apps. Hemsidan som sällan behöver uppdateras är en enkel sida byggd i statisk HTML som fungerar lika bra på mobilen som på skrivbordsdatorn.</description>
     </item>
     
     <item>
       <title>Sandvik wifi</title>
-      <link>http://simonblund.com/project/sandvikwifi/</link>
+      <link>http://simonblund.github.io/simonblund.com/project/sandvikwifi/</link>
       <pubDate>Thu, 14 Aug 2014 18:33:19 +0100</pubDate>
       
-      <guid>http://simonblund.com/project/sandvikwifi/</guid>
+      <guid>http://simonblund.github.io/simonblund.com/project/sandvikwifi/</guid>
       <description>Sandvik är en gästhamn med stuguthyrning, minilivs och café på Kökar. De anlitade mig för att förse gästerna på området med internet. Det fanns dock vissa problem, mellan servicehuset och cafét finns ingen nätverkskabel och det skulle vara dyrt och besvärligt att dra en sådan mellan byggnaderna på ett bra sätt. Med UNIFI:s trådlösa utomhusaccesspunkter var detta inte något större bekymmer då den ena AP:n på cafehuset kan agera uplink för AP:n på servicehuset.</description>
     </item>
     
     <item>
       <title>Kökar grundskola</title>
-      <link>http://simonblund.com/project/k%C3%B6kargrundskola/</link>
+      <link>http://simonblund.github.io/simonblund.com/project/k%C3%B6kargrundskola/</link>
       <pubDate>Tue, 15 Jul 2014 23:19:43 +0100</pubDate>
       
-      <guid>http://simonblund.com/project/k%C3%B6kargrundskola/</guid>
+      <guid>http://simonblund.github.io/simonblund.com/project/k%C3%B6kargrundskola/</guid>
       <description>Kökar grundskola var min första företagskund. Jag bistår med tips på inköp, stödtjänster till personal och elever samt uträttar service och utvecklingsarbete för organisationen.
 På grund av den sparsamma IT-budgeten och kravet på att elevdatorer är brukbara så länge som möjligt används linux på en den del av skolans datorer som köptes in före år 2014. Vi har också i samråd med skolledningen infört Google Apps for education som det primära arbetsverktyget för att minska kostnader för office-program och samtidigt göra produktivitetsarbete lättare.</description>
     </item>
