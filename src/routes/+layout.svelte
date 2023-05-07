@@ -1,5 +1,8 @@
 <script>
     import "../app.css";
-  </script>
-  
+</script>
+
+<div class="grid grid-cols-9">
   <slot />
+</div>
+  
