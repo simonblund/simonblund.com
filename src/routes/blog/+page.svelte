@@ -2,6 +2,26 @@
     export let data
     console.log(JSON.stringify(data))
 </script>
-<div>
+<div class="text-center pt-16">
+    <h1 class="text-xl">Blog</h1>
+    <p class="font-serif pt-2">
+        I do not promise to write things here.  <br>
+        But the things written will be the tings I would have wanted to know before I learned them. <br>
+        Enjoy!
+    </p>
 
+    <div class="pt-6">
+        {#each data.posts as post}
+        <div class="pt-4">
+            <a href={post.path}>
+                <h2 class="text-xl">{post.meta.title} - <span class="text-m text-slate-500">{post.meta.date}</span></h2> 
+            </a>
+            <p>{post.meta.description}</p>
+
+        </div>
+            
+         {/each}
+
+    </div>
+    
 </div>

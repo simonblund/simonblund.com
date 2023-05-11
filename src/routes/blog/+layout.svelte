@@ -4,5 +4,8 @@
         <a href="">Projects</a>
         <a href="">CV</a>
     </div>
-    <slot />
+    <div class="col-span-9 mt-14">
+        <slot />
+    </div>
+    
 </div>
