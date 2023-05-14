@@ -6,9 +6,7 @@ const fetchMarkdownPosts = async () => {
       iterablePostFiles.map(async ([path, resolver]) => {
         const { metadata } = await resolver()
         
-        const postPath = path.slice(11, -3)
-        console.log(path)
-  
+        const postPath = path.slice(11, -3).replace('/posts', '')
         return {
           meta: metadata,
           path: postPath,
@@ -16,7 +14,7 @@ const fetchMarkdownPosts = async () => {
       })
     )
   
-    return allPosts
+    return allPosts.sort((a,b)=>Date.parse(b.meta.date) - Date.parse(a.meta.date))
   }
 
 export const load = async () => {

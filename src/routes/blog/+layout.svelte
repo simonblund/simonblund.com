@@ -4,7 +4,7 @@
         <a href="">Projects</a>
         <a href="">CV</a>
     </div>
-    <div class="col-span-9 mt-14">
+    <div class="col-span-9 mt-14 bg-slate-100 grid grid-cols-9 min-h-screen">
         <slot />
     </div>
     

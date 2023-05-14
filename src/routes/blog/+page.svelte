@@ -2,7 +2,7 @@
     export let data
     console.log(JSON.stringify(data))
 </script>
-<div class="text-center pt-16">
+<div class="text-center pt-16 bg-slate-50 col-span-5 col-start-3">
     <h1 class="text-xl">Blog</h1>
     <p class="font-serif pt-2">
         I do not promise to write things here.  <br>

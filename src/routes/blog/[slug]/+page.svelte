@@ -2,9 +2,9 @@
     export let data;
 </script>
   
-  <article class="col-span-5 bg-red-100">
-    <h1>{ data.title }</h1>
+  <article class="bg-slate-50 col-span-5 col-start-3 px-4 py-6">
+    <h1 class=" font-semibold text-2xl">{ data.title }</h1>
     <p>Published: {data.date}</p>
-    we
+    
     <svelte:component this={data.content} />
   </article>
