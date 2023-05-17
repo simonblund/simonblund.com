@@ -12,14 +12,14 @@
 
     <div class="pt-6">
         {#each data.posts as post}
-        <div class="pt-4">
-            <a href={post.path}>
-                <h2 class="text-xl">{post.meta.title} - <span class="text-m text-slate-500">{post.meta.date}</span></h2> 
-            </a>
-            <p>{post.meta.description}</p>
 
+        <div class="py-6 px-4 text-left">
+            <a href={post.path}>
+                <h2 class="text-xl"><span class="text-m text-slate-500">{post.meta.date}</span> - {post.meta.title}</h2> 
+            </a>
+            <p class="text-left text-slate-800">{post.meta.description}</p>
         </div>
-            
+    
          {/each}
 
     </div>

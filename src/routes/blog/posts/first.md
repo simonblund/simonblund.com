@@ -5,9 +5,9 @@ tags:
     - ko
     - lala
 
-description: I discuss things relating to importnat stuff.
+description: Let's see how long Ill keep this up.
 ---
 
-Hello, I am _Post One._
+Beep boop Post 1.
 
 **Nice to meet you!**
