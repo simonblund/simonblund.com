@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="content-security-policy" content="">
+		<link href="../_app/immutable/assets/0.6f3a9200.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.ad47ddf7.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.0c59758d.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.5e64769e.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.b1d19aa0.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/preload-helper.41c905a7.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.c56b93f7.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/2.9a3452f2.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/navbar.36c0469d.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/5.5e52b742.js">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">
+
+
+<div class="grid grid-cols-9"><div class="col-span-9"><div class="fixed top-0 left-0 right-0 bg-slate-200 col-span-full pt-4 pb-4 p-2 grid grid-cols-4 h-14 justify-items-center"><a href="/" class="text-slate-800">Home</a>
+    <a href="/" class="text-slate-400">Projects</a>
+    <a href="/" class="text-slate-400">CV</a>
+    <a href="/blog" class="text-slate-800">&#39;Blog&#39;</a></div>
+    <div class="col-span-9 mt-14 bg-slate-100 grid grid-cols-9 min-h-screen"><article class="bg-slate-50 col-span-5 col-start-3 px-4 py-6 prose"><h1 class="font-semibold text-2xl">Finding things that work in software engineering</h1>
+    <p>Published: 2023-05-11</p>
+
+    
+    
+    <h2 class="text-2xl">Background.</h2>
+<p class="font-serif my-4 pb-8 break-words indent-1 capitalize text-red-200">When I started working professionally with software development, after doing web development freelancing for many years I joined a company that just worked. They had started a cloud journey from their monolithic Java-application running in Oracle WebLogic to Microservices on AWS ECS about a year before I joined.</p>
+<p class="font-serif my-4 pb-8 break-words indent-1 capitalize text-red-200">The company consisted of several development teams displaced across 3 countries each team consisting of between 4-10 people. I joined the team that focused on customer information and the related flows and services. The team was aligned with the business process of customer registration, customer knowledge (KYC) and compliance, for our small part of the platform we were responsible for everything from the frontend to the way things were saved to the databases. </p>
+<p class="font-serif my-4 pb-8 break-words indent-1 capitalize text-red-200">At this point in time I was green when it comes to both systems design and Java development in general. The closest thing I had done before this was a few web-applications written in PHP to deal with things like GDPR compliance and stock-ordering for small companies. Luckily my team consisted of great mentors.</p>
+<p class="font-serif my-4 pb-8 break-words indent-1 capitalize text-red-200">Our team had at the time of me joining been able to move a small part of the functionality we were responsible for out of the monolith to microservices, the other teams were more or less in the same state. At the end of my employment at the company 2 years later we had only a few modules left running in the monolith and that was mainly because of the payments team not being able to move out of there yet. A few months after I left the team was able to successfully move that code too.</p>
+<p class="font-serif my-4 pb-8 break-words indent-1 capitalize text-red-200">One might think that 3 years for a cloud move is a long time but it really isn’t for a system of this scale. The most impressive thing in my mind is however not the fact that we made it, it is the fact that we were able to produce new features requested by the business while simultaneusly working our way out of the monolith. And doing this while other teams were doing major changes to their systems on which we depended and deploying things we worked on to production whenever they were ready for it.</p>
+<h2 class="text-2xl">Standing on the shoulders of unknown.</h2>
+<p class="font-serif my-4 pb-8 break-words indent-1 capitalize text-red-200">It wasn’t until I stopped working for the company I realised what I had experienced there, and ever since I have been trying to figure out how things were achieved and how to bring this knowledge with me to my new organizations.</p>
+<p class="font-serif my-4 pb-8 break-words indent-1 capitalize text-red-200">Looking back at the things we did I can see that we applied a set of things:</p>
+<h3>Rules within the team</h3>
+<ul class="list-inside list-disc"><li class="list-inside">Short lived branches, and never ever deploying a dev-branch to other things than CI.</li>
+<li class="list-inside">Quick PR reviews, no PR was left open more than a few hours without review.</li>
+<li class="list-inside">You are responsible for the things you deploy, and that you know how to rollback if something fails.</li></ul>
+<h3>Technology</h3>
+<ul class="list-inside list-disc"><li class="list-inside">CI-pipeline with high coverage unit tests. (can not merge before tests pass)</li>
+<li class="list-inside">Continous deployment. Deployment to production happened daily, it took 15 minutes to do and required approvals by at least two other devs.</li></ul>
+<h3>Methods we used</h3>
+<ul class="list-inside list-disc"><li class="list-inside">DDD Domain Driven Design. We needed to understand what the business needed and we needed to be able to explain to business people how the system worked.</li>
+<li class="list-inside">Close work with stake holders. Whenever we worked on a new feature for a business function we started off with a meeting where we discussed the features needed and wrote user stories together with them.</li>
+<li class="list-inside">Pull based task assignment. Whenever you as a dev where done with something you asked if someone needed help, otherwise you went straight to the backlog and picked the highest up story. No direct assignments unless agreed upon with the team.</li>
+<li class="list-inside">Bi-weekly retrospectives.</li>
+<li class="list-inside">Blameless post mortems with discussions that were documented.</li></ul>
+<h3>Code patterns</h3>
+<ul class="list-inside list-disc"><li class="list-inside">Strangler fig pattern when moving functionality out of older systems. Creating the new functionality in a backwards compatible way, usually first just provding an interface on the new micro service that called the old monolith applications. Informing consumers of that API in other teams to use the new API. Look for logs and see that no new calls are made to the monolith and then build up the functionality in the micro service. Move one piece of functionality at a time. No big bang rewrites.</li>
+<li class="list-inside">Always using adapters and ports. When several teams make big changes in all applications in an environment. It must be easy to implement new clients of other services when APIs change, while your applications functional logic still remains the same.</li></ul>
+<h2 class="text-2xl">Evidence vs. Emotions vs. Stubbornness</h2>
+<p class="font-serif my-4 pb-8 break-words indent-1 capitalize text-red-200">It would be easy to say that the things we did above is the recipe for success in all organisations, while all of the things mentioned above brought us benefits, from my point of view, every single one of them carries drawbacks and not all of them are applicable in all situations. By the way, how would anyone know that any of the above mentioned things helped us at all?</p>
+<p class="font-serif my-4 pb-8 break-words indent-1 capitalize text-red-200">In the book Accelerate (2018) Nicole Forsgren and coauthors actually go through that there is some evidence behind a lot of the practices we applied. Companies categorized as high performance uses practices like trunk-based development, continous deployment, test automation and lightweight change approvals.</p>
+<p class="font-serif my-4 pb-8 break-words indent-1 capitalize text-red-200">I won’t hide the fact that I enjoyed the ways of working in my team, and that might taint my view of the practices.</p>
+<p class="font-serif my-4 pb-8 break-words indent-1 capitalize text-red-200">Developers are stubborn animals, at least I am, and at least three of my previous team mates were. At times we would have heated arguments over small stuff. In a space where there is usually more than one solution to a problem, all solutions are equal until one has won on merit after discussions and/or experimentation.</p>
+<h2 class="text-2xl">Experimentation and empirical improvement</h2>
+<p class="font-serif my-4 pb-8 break-words indent-1 capitalize text-red-200">I’ll leave this for another day. But I am convinced that the correct term for software development is software engineering and that bears more than syntactical meaning.</p>
+<h2 class="text-2xl">Mountains in all villages [“Det finns berg i alla byar”]</h2>
+<p class="font-serif my-4 pb-8 break-words indent-1 capitalize text-red-200">While my time at the organisation I have used as an example above was good, it was no paradise. We had our issues, the team had its issues, the organizations had its issues. The coffee machine was meh. And so on. Still a great experience.</p>
+<p class="font-serif my-4 pb-8 break-words indent-1 capitalize text-red-200">Out.</p></article></div></div></div>
+
+
+			
+			<script>
+				{
+					__sveltekit_aj2afu = {
+						base: new URL("..", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null,null];
+
+					Promise.all([
+						import("../_app/immutable/entry/start.ad47ddf7.js"),
+						import("../_app/immutable/entry/app.b1d19aa0.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2, 5],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>
