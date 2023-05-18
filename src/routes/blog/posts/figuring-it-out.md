@@ -9,13 +9,13 @@ description: How I think about software engineering and how to get things workin
 ---
 
 ## Background.
-When I started working professionally with software development, after doing web development freelancing for many years I joined a company that just worked. They had started a cloud journey from their monolithic Java-application running in Oracle WebLogic to Microservices on AWS ECS about a year before I joined.
+When I started working professionally with software development, after doing web development freelancing for many years I joined a company that just worked. The company had initiated the shift from a monolithic Java application running on Oracle WebLogic to a microservices architecture on AWS ECS about a year prior to my arrival.
 
-The company consisted of several development teams displaced across 3 countries each team consisting of between 4-10 people. I joined the team that focused on customer information and the related flows and services. The team was aligned with the business process of customer registration, customer knowledge (KYC) and compliance, for our small part of the platform we were responsible for everything from the frontend to the way things were saved to the databases. 
+This organization comprised multiple development teams spread across three countries, with each team consisting of 4 to 10 individuals. I became part of the team dedicated to customer information and its associated processes and services. Our focus revolved around customer registration, customer knowledge (KYC), and compliance. Within our specific domain, we were responsible for everything from the frontend to database operations.
 
-At this point in time I was green when it comes to both systems design and Java development in general. The closest thing I had done before this was a few web-applications written in PHP to deal with things like GDPR compliance and stock-ordering for small companies. Luckily my team consisted of great mentors.
+At this point in time I was green when it comes to both systems design and Java development in general. The closest thing I had done before this was a few web-applications written in PHP to deal with things like GDPR compliance and stock-ordering for small companies. Fortunately, I found myself surrounded by exceptional mentors within my team.
 
-Our team had at the time of me joining been able to move a small part of the functionality we were responsible for out of the monolith to microservices, the other teams were more or less in the same state. At the end of my employment at the company 2 years later we had only a few modules left running in the monolith and that was mainly because of the payments team not being able to move out of there yet. A few months after I left the team was able to successfully move that code too.
+By the time I joined, our team had successfully transitioned a small portion of our responsibilities from the monolith to microservices. The other teams were in similar stages of the migration. Over the course of my two-year tenure with the company, we managed to extract most modules from the monolith, with only a few remaining due to the payments team's inability to transition out. However, a few months after my departure, even that code was successfully migrated.
 
 One might think that 3 years for a cloud move is a long time but it really isn't for a system of this scale. The most impressive thing in my mind is however not the fact that we made it, it is the fact that we were able to produce new features requested by the business while simultaneusly working our way out of the monolith. And doing this while other teams were doing major changes to their systems on which we depended and deploying things we worked on to production whenever they were ready for it.
 
@@ -25,9 +25,9 @@ It wasn't until I stopped working for the company I realised what I had experien
 Looking back at the things we did I can see that we applied a set of things:
 
 ### Rules within the team
-- Short lived branches, and never ever deploying a dev-branch to other things than CI.
-- Quick PR reviews, no PR was left open more than a few hours without review.
-- You are responsible for the things you deploy, and that you know how to rollback if something fails.
+- We employed a CI pipeline with comprehensive unit tests, allowing merges only when the tests passed successfully.
+- Prompt peer review of pull requests (PRs) ensured that no PR remained open for more than a few hours without review.
+- Every developer was accountable for their deployments and responsible for knowing how to roll back in the event of failure.
 
 ### Technology
 - CI-pipeline with high coverage unit tests. (can not merge before tests pass)
@@ -41,14 +41,14 @@ Looking back at the things we did I can see that we applied a set of things:
 - Blameless post mortems with discussions that were documented.
 
 ### Code patterns
-- Strangler fig pattern when moving functionality out of older systems. Creating the new functionality in a backwards compatible way, usually first just provding an interface on the new micro service that called the old monolith applications. Informing consumers of that API in other teams to use the new API. Look for logs and see that no new calls are made to the monolith and then build up the functionality in the micro service. Move one piece of functionality at a time. No big bang rewrites.
-- Always using adapters and ports. When several teams make big changes in all applications in an environment. It must be easy to implement new clients of other services when APIs change, while your applications functional logic still remains the same.
+- We applied the Strangler Fig pattern when transitioning functionality from older systems. This involved initially creating new functionality in a backwards-compatible manner, establishing an interface on the new microservice that called the legacy monolithic applications. We informed other teams of the new API, monitored logs to ensure no new calls were made to the monolith, and gradually built up the functionality within the microservice. Each piece of functionality was migrated incrementally, avoiding disruptive rewrites.
+- Adapters and ports were consistently used to facilitate smooth integration when multiple teams implemented significant changes across the environment. This approach allowed new clients of other services to adapt easily to API changes while preserving the functional logic of their applications.
 
 
 ## Evidence vs. Emotions vs. Stubbornness
-It would be easy to say that the things we did above is the recipe for success in all organisations, while all of the things mentioned above brought us benefits, from my point of view, every single one of them carries drawbacks and not all of them are applicable in all situations. By the way, how would anyone know that any of the above mentioned things helped us at all?
+It would be easy to say that the things we did above is the recipe for success in all organisations. While each of these practices yielded benefits for us, they also carried drawbacks, and not all of them are universally applicable. Moreover, how can we know if any of these practices truly contributed to our success?
 
-In the book Accelerate (2018) Nicole Forsgren and coauthors actually go through that there is some evidence behind a lot of the practices we applied. Companies categorized as high performance uses practices like trunk-based development, continous deployment, test automation and lightweight change approvals.
+In the book "Accelerate" (2018) by Nicole Forsgren and her coauthors, they delve into the evidence supporting many of the practices we implemented. High-performing companies were found to employ practices such as trunk-based development, continuous deployment, test automation, and lightweight change approvals.
 
 I won't hide the fact that I enjoyed the ways of working in my team, and that might taint my view of the practices.
 
