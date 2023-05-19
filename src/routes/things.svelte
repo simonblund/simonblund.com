@@ -2,9 +2,9 @@
 	import image from '$lib/images/graphs.png';
 </script>
 
-<div class="bg-blue-200 col-span-9 grid grid-cols-9 h-">
-	<div class="col-span-6 px-6 py-6">
-		<h1 class=" font-semibold text-2xl">What I help people and organizations with</h1>
+<div class="bg-blue-200 col-span-9 grid grid-cols-9 text-center">
+	<div class="col-span-5 col-start-3 px-6 py-6">
+		<h1 class=" font-sans text-4xl py-4">What I help people and organizations with</h1>
 
 		<p class="font-sans pt-2">
 			I work with all the things most small-mid sized businesses needs in the IT-space. Web
@@ -16,11 +16,8 @@
 			of Wireless networks in challenging environments.
 		</p>
 		<p class="font-sans pt-2">
-			I have been doing these things since 2014 and during these years I have gained quite a lot of
-			experience.
+			I have been doing this since 2014.
 		</p>
 	</div>
-	<div class="col-span-3 h-full">
-		<img src={image} alt="" class="object-fill h-full" />
-	</div>
+	
 </div>
